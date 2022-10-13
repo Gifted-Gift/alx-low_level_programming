@@ -1,4 +1,5 @@
 #include <studio.h>
+
 /**
  * main - this prints out text
  * function - main
@@ -8,6 +9,8 @@
 int main(void) /* return 0 */
 {
 	char Mytext[] = "\"Programming is like building a multilingual puzzle";
+
 	puts(Mytext);
+	
 	return (0);
 }
