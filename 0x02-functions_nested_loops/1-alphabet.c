@@ -1,19 +1,16 @@
 #include "main.h"
 
 /**
-* print_alphabet_x10 - print the alphabets using _putchar
+* print_alphabet - print lowercase alphabet using _putchar
 * Description: prints lowercase letters a-z
 */
-void print_alphabet_x10(void)
+void print_alphabet(void)
 {
 	char letter;
 
-	int i;
+	for (letter = 'a'; letter <= 'z'; ++letter)
 
-	for (i = 0; i < 10; i++)
-	{
-		for (letter = 'a'; letter <= 'z'; ++letter)
-			_putchar(letter);
-		_putchar('\n');
-	}
+		_putchar(letter);
+
+	_putchar('\n');
 }
