@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
-* main - print varius sizes of different types
+* main - print various sizes of different data types
 * Description: prints various sizes of types on the machine
 * Return: 0 after running
 */
