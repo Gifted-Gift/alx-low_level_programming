@@ -1,3 +1,5 @@
+#include "main.h"
+
 int check_seperators(char c);
 
 /**
@@ -10,45 +12,32 @@ int check_seperators(char c);
  * Return: pointer to s
  */
 
-char *cap_string(char *s)
+char *cap_string(char *strg)
 {
-	int i = 0;
+	int ind = 0;
 
-	while (s[i])
+	while (strg[ind])
 	{
-		if (i == 0 && (s[i] >= 'a' && s[i] <= 'z'))
+		while (!(strg[ind] >= 'a' && strg[ind] <= 'z'))
+			ind++;
 
-			s[i] -= 32;
-
-		if (check_separators(s[i]) && (s[i + 1] >= 'a' && s[i + 1] <= 'z'))
-
-			s[i + 1] -= 32;
-
-		i++;
+		if (strg[ind - 1] == ' ' ||
+			strg[ind - 1] == '\t' ||
+			strg[ind - 1] == '\n' ||
+			strg[ind - 1] == ',' ||
+			strg[ind - 1] == ';' ||
+			strg[ind - 1] == '.' ||
+			strg[ind - 1] == '!' ||
+			strg[ind - 1] == '?' ||
+			strg[ind - 1] == '"' ||
+			strg[ind - 1] == '(' ||
+			strg[ind - 1] == ')' ||
+			strg[ind - 1] == '{' ||
+			strg[ind - 1] == '}' ||
+			ind == )
+				strg[ind] -=12;
+		ind++;
 	}
 
-	return (s);
-}
-
-/**
- * check_separators - Separators of words: space, tabulation, new line,
- * ,, ;, ., !, ?, ", (, ), {, and }
- * @c: an input character
- * Return: 1 if separator, 0 otherwise
- */
-
-int check_separators(char c)
-{
-	int i = 0;
-
-	char separators[13] = { ' ', '\t', '\n', ',', ';', '.', '!', '?',
-		'"', '(', ')', '{', '}' };
-
-	for (i < 13; i++)
-	{
-		if (c == separators[i])
-
-			return (1);
-	}
-	return (0);
+	return (strg);
 }
