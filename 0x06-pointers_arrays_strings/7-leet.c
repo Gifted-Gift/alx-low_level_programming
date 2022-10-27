@@ -14,7 +14,7 @@
  * You are not allowed to use switch
  * You are not allowed to use any ternary operation
  * @s: an input string to encode
- *  Return: An encode string
+ * Return: An encode string
  */
 
 char *leet(char *s)
