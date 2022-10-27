@@ -16,7 +16,7 @@ char *cap_string(char *strg)
 {
         int ind = 0;
 
-        while (s[ind])
+        while (strg[ind])
         {
                 if (ind == 0 && (strg[ind] >= 'a' && strg[ind] <= 'z'))
 
@@ -29,7 +29,7 @@ char *cap_string(char *strg)
                 ind++;
         }
 
-        return (s);
+        return (strg);
 }
 
 /**
