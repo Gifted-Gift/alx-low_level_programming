@@ -44,7 +44,7 @@ int check_separators(char c)
 	char separators[13] = { ' ', '\t', '\n', ',', ';', '.', '!', '?',
 		'"', '(', ')', '{', '}' };
 
-	for (; i < 13; i++)
+	for (i < 13; i++)
 	{
 		if (c == separators[i])
 
