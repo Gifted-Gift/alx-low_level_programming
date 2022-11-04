@@ -1,1 +1,1 @@
-**0x09. C - Static libraries readme**
+**0x09. C - Static libraries**
