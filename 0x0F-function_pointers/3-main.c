@@ -1,7 +1,7 @@
 #include "3-calc.h"
 
 /**
- * main - program that performs simple operations
+ * main -program that performs simple operations
  * @argc: argument count, number of arguments
  * @argv: argument vector, array of arguments
  * Return: Always 0 (Success)
@@ -10,9 +10,8 @@
 int main(int argc, char *argv[])
 
 {
-	int a, b, r;
-	char o;
-	int (*func)(int, int);
+	int a, b;
+	int (*operation)(int, int);
 
 	if (argc != 4)
 	{
@@ -20,28 +19,24 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	a = atoi(argv[1]);
-	b = atoi(argv[3]);
-
-	func = get_op_func(argv[2]);
-
-	if (!func)
+	if (argv[2][1])
 	{
-		print("Error\n");
+		printf("Error\n");
 		exit(99);
 	}
 
-	o= *argv[2];
+	operation = get_op_func(argv[2]);
 
-	if ((o == '/' || o == '&') && b == 0)
+	if (operation == NULL)
 	{
 		printf("Error\n");
-		exit (100);
+		exit(99);
 	}
 
-	r = func(a, b);
+	a = atoi(argv[1]);
+	b = atoi(argv[3]);
 
-	printf("%d\n", r);
+	printf("%d\n", operation(a, b));
 
 	return (0);
 }
