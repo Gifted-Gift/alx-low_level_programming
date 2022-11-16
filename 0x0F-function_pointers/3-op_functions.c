@@ -1,7 +1,7 @@
 #include "3-calc.h"
 
 /**
- * op_add - adds two numbers
+ * op_add - adds int two numbers
  * @a: first number
  * @b: second number
  * Return: the added sum
@@ -45,11 +45,6 @@ int op_mul(int a, int b)
 
 int op_div(int a, int b)
 {
-	if (b == 0)
-	{
-		printf("Error\n");
-		exit(100);
-	}
 	return (a / b);
 }
 
@@ -57,16 +52,10 @@ int op_div(int a, int b)
  * op_mod - adds two numbers
  * @a: first number
  * @b: second number
- * Return: the added sum
+ * Return: the mod of a divided by b
 */
 
 int op_mod(int a, int b)
 {
-
-	if (b == 0)
-	{
-		printf("Error\n");
-		exit(100);
-	}
 	return (a % b);
 }
