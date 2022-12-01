@@ -1,5 +1,3 @@
-#ifndef BIT_MANIPULATION
-#define BIT_MANIPULATION
 #include <stdlib.h>
 #ifndef __MAIN_H__
 #define __MAIN_H__
