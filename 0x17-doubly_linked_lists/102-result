@@ -7,3 +7,4 @@ item = first_num*second_num
 if ispalindrome(item):
 mylist.append(item)
 print(max(mylist))
+echi 'max(mylist)   > 102-result
